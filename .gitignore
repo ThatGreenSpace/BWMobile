@@ -1,0 +1,7 @@
+# Phonenap stuff
+plattforms/*
+plugins/*
+merges/*
+
+# OSX
+.DS_Store
