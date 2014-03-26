@@ -1,42 +1,74 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
+        <title>Building Works Mobile</title>
+        <meta name="description" content="">
+        <meta name="author" content="That Green Space">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="cleartype" content="on">
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="css/lib/lungo.css">
+        <link rel="stylesheet" href="css/lib/lungo.theme.css">
+        <link rel="stylesheet" href="css/lib/lungo.icon.css">
+        <!-- App Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
     </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
+    <body class="app">
+        <section id="home" data-transition="slide" class="show">
+            <header data-title="Building Works">
+                <nav class="on-right">
+                    <button data-icon="cog"></button>
+                </nav>
+            </header>
+            <article class="list indented active">
+                <div>
+                    <img src="img/logo.png"/>
+                </div>
+                <div class="grid">
+                    <div class="option">
+                        <a href="#">
+                            <div class="icon calendar"></div>
+                        </a>
+                        <p class="text thin">Reserve Facility</p>
+                    </div>
+                    <div class="option">
+                        <a href="#">
+                            <div class="icon pencil"></div>
+                        </a>
+                        <p class="text thin">Submit & View Inquiry</p>
+                    </div>
+                    <div class="option">
+                        <a href="#">
+                            <div class="icon list-alt"></div>
+                        </a>
+                        <p class="text thin">Notices</p>
+                    </div>
+                    <div class="option">
+                        <a href="#">
+                            <div class="icon rss"></div>
+                        </a>
+                        <p class="text thin">Information & Contacts</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/lib/quo.js"></script>
+        <script type="text/javascript" src="js/lib/lungo.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
+            Lungo.init({
+                name: 'Building Works',
+                resources: []
+            });
             app.initialize();
         </script>
     </body>
