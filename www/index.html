@@ -22,13 +22,14 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body class="app">
-        <section id="home" data-transition="slide" class="show">
+        <section id="main" data-transition="slide">
             <header data-title="Building Works">
                 <nav class="on-right">
-                    <button data-icon="cog"></button>
+                    <button data-icon="cog" data-view-section="settings"
+                            data-async="templates/settings/index.html"></button>
                 </nav>
             </header>
-            <article class="list indented active">
+            <article id="main-content" class="list indented">
                 <div>
                     <img src="img/logo.png"/>
                 </div>
@@ -36,26 +37,26 @@
                     <div class="option">
                         <a href="#">
                             <div class="icon calendar"></div>
+                            <p class="text thin">Reserve Facility</p>
                         </a>
-                        <p class="text thin">Reserve Facility</p>
                     </div>
                     <div class="option">
-                        <a href="#">
+                        <a href="#" data-view-section="inquiries" data-async="templates/inquiries/index.html">
                             <div class="icon pencil"></div>
-                        </a>
                         <p class="text thin">Submit & View Inquiry</p>
+                        </a>
                     </div>
                     <div class="option">
                         <a href="#">
                             <div class="icon list-alt"></div>
+                            <p class="text thin">Notices</p>
                         </a>
-                        <p class="text thin">Notices</p>
                     </div>
                     <div class="option">
                         <a href="#">
                             <div class="icon rss"></div>
+                            <p class="text thin">Information & Contacts</p>
                         </a>
-                        <p class="text thin">Information & Contacts</p>
                     </div>
                 </div>
             </article>
@@ -67,7 +68,7 @@
         <script type="text/javascript">
             Lungo.init({
                 name: 'Building Works',
-                resources: []
+                version: '0.1.0',
             });
             app.initialize();
         </script>
