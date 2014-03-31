@@ -25,8 +25,7 @@
         <section id="main" data-transition="slide">
             <header data-title="Building Works">
                 <nav class="on-right">
-                    <button data-icon="cog" data-view-section="settings"
-                            data-async="templates/settings/index.html"></button>
+                    <button data-icon="cog" data-view-section="settings"></button>
                 </nav>
             </header>
             <article id="main-content" class="list indented">
@@ -41,7 +40,7 @@
                         </a>
                     </div>
                     <div class="option">
-                        <a href="#" data-view-section="inquiries" data-async="templates/inquiries/index.html">
+                        <a href="#" data-view-section="inquiries">
                             <div class="icon pencil"></div>
                         <p class="text thin">Submit & View Inquiry</p>
                         </a>
@@ -69,6 +68,8 @@
             Lungo.init({
                 name: 'Building Works',
                 version: '0.1.0',
+                resources: ['templates/settings/index.html',
+                            'templates/inquiries/index.html']
             });
             app.initialize();
         </script>
