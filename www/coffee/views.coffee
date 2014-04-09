@@ -1,5 +1,5 @@
-class NoticeItem extends Monocle.View
+class __View.NoticeItem extends Monocle.View
 
-    container: "ul#notices"
+    container: "section#notices article ul"
 
     template_url: "tpls/notice.mustache"
