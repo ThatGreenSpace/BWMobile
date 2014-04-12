@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "lungo": "~2.2.1",
-    "quojs": "~2.3.6",
+    "quojs": "2.3.3",
     "monocle": "~1.0.4"
   }
 }

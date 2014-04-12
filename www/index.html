@@ -15,13 +15,14 @@
         <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
 
         <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="css/lib/lungo.css">
-        <link rel="stylesheet" href="css/lib/lungo.theme.css">
-        <link rel="stylesheet" href="css/lib/lungo.icon.css">
+        <link rel="stylesheet" href="components/lungo/lungo.css">
+        <link rel="stylesheet" href="components/lungo/lungo.theme.css">
+        <link rel="stylesheet" href="components/lungo/lungo.icon.css">
         <!-- App Stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body class="app">
+        <!-- Main Section -->
         <section id="main" data-transition="slide">
             <header data-title="Building Works">
                 <nav class="on-right">
@@ -61,24 +62,107 @@
             </article>
         </section>
 
+        <!-- Inquiries Sections -->
+
+        <section id="inquiries" data-transition="slide">
+            <header data-back="chevron-left" data-title="Inquiries">
+                <nav class="on-right">
+                    <button data-icon="cog" data-view-section="settings"></button>
+                </nav>
+            </header>
+            <article id="inquiries_home" class="list indented">
+                <div class="grid">
+                    <div class="option">
+                        <a href="#" data-view-section="send-inquiry">
+                            <div class="icon envelope"></div>
+                            <p class="text thin">Send Inquiry</p>
+                        </a>
+                    </div>
+                    <div class="option">
+                        <a href="#" data-view-section="inquiry-list">
+                            <div class="icon user"></div>
+                            <p class="text thin">My Inquries</p>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="inquiry-list" data-transition="slide">
+            <header data-back="chevron-left" data-title="My Inquiries">
+                <nav class="on-right">
+                    <button data-icon="cog" data-view-section="settings"></button>
+                </nav>
+            </header>
+            <article class="list indented">
+                <ul></ul>
+            </article>
+        </section>
+
+        <section id="send-inquiry" data-transition="slide">
+            <header data-back="chevron-left" data-title="Send inquiry">
+                <nav class="on-right">
+                    <button data-icon="cog" data-view-section="settings"></button>
+                </nav>
+            </header>
+            <article>
+                <div class="form">
+                    <label>If possible, please attach a photo to better describe your inquiry/problem</label>
+                    <input id="txt-subject" type="text" placeholder="Subject title" class="border">
+                    <textarea id="txt-description" placeholder="Write something..." class="border" rows="10"></textarea>
+                    <label>Attach a photo: </label><a href="#" class="right" data-icon="camera"></a>
+                    <a href="#" id="btn-send" data-action="save" class="anchor button big blue" data-label="Send" data-icon="plus"></a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Notices Sections -->
+        <section id="notices" data-transition="slide">
+            <header data-back="chevron-left" data-title="Notices">
+                <nav class="on-right">
+                    <button data-icon="cog" data-view-section="settings"></button>
+                </nav>
+            </header>
+            <article class="list indented">
+            </article>
+        </section>
+        <section id="notice_detail" data-transition="slide">
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" data-transition="slide">
+            <header data-back="chevron-left" data-title="Settings">
+            </header>
+            <article class="list indented">
+                <div class="grid">
+                    Settings section
+                </div>
+            </article>
+        </section>
+
+
         <!-- Cordova dependencies -->
         <script type="text/javascript" src="cordova.js"></script>
         <!-- Lungo dependencies -->
-        <script type="text/javascript" src="components/quo/quo.js"></script>
+        <script type="text/javascript" src="components/quojs/quo.js"></script>
         <script type="text/javascript" src="components/lungo/lungo.js"></script>
         <script type="text/javascript" src="components/monocle/monocle.js"></script>
-         <!-- BWMobile App -->
-        <script type="text/javascript" src="js/models.js"></script>
-        <script type="text/javascript" src="js/views.js"></script>
-        <script type="text/javascript" src="js/controllers.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <!-- BWMobile Models -->
+        <script type="text/javascript" src="app/mvc/model/inquiry.js"></script>
+        <script type="text/javascript" src="app/mvc/model/notice.js"></script>
+        <!-- BWMobile Views -->
+        <script type="text/javascript" src="app/mvc/view/inquiry.js"></script>
+        <script type="text/javascript" src="app/mvc/view/notice.js"></script>
+        <!-- BWMobile Controllers -->
+        <script type="text/javascript" src="app/mvc/controller/inquiries.js"></script>
+        <script type="text/javascript" src="app/mvc/controller/notices.js"></script>
+        <script type="text/javascript" src="app/mvc/controller/newinquiry.js"></script>
+        <!-- BWMobile App -->
+        <script type="text/javascript" src="app/index.js"></script>
         <script type="text/javascript">
             Lungo.init({
                 name: 'Building Works',
                 version: '0.1.0',
-                resources: ['html/settings/index.html',
-                            'html/inquiries/index.html',
-                            'html/notices/index.html']
             });
             app.initialize();
         </script>
