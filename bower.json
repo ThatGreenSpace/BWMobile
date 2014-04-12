@@ -1,0 +1,28 @@
+{
+  "name": "BWMobile",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ThatGreenSpace/BWMobile",
+  "authors": [
+    "Alberto Resco Perez"
+  ],
+  "description": "Building Works Mobile",
+  "main": "www/css/index.css",
+  "license": "Commercial",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ThatGreenSpace/BWMobile.git"
+  },
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lungo": "~2.2.1",
+    "quojs": "~2.3.6",
+    "monocle": "~1.0.4"
+  }
+}
