@@ -16,14 +16,14 @@ class NewInquiryController extends Monocle.Controller
     onSave: (event) ->
         console.log @subject.val(), @description.val()
 
-        __Model.Inquiry.create
+        inquiry = __Model.Inquiry.create
             id: "3",
             subject: @subject.val()
             description: @description.val()
 
-        Lungo.Router.back()
-
-        @name.val() ""
-        @description.val() ""
+        if inquiry
+            Lungo.Router.back()
+            @subject.val ""
+            @description.val ""
 
 __Controller.NewInquiry = new NewInquiryController "section#send-inquiry"

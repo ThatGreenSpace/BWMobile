@@ -26,15 +26,18 @@
     };
 
     NewInquiryController.prototype.onSave = function(event) {
+      var inquiry;
       console.log(this.subject.val(), this.description.val());
-      __Model.Inquiry.create({
+      inquiry = __Model.Inquiry.create({
         id: "3",
         subject: this.subject.val(),
         description: this.description.val()
       });
-      Lungo.Router.back();
-      this.name.val()("");
-      return this.description.val()("");
+      if (inquiry) {
+        Lungo.Router.back();
+        this.subject.val("");
+        return this.description.val("");
+      }
     };
 
     return NewInquiryController;
